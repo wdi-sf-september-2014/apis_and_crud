@@ -1,0 +1,28 @@
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+<body style="background-color:#FFFCF6">
+
+	<div class="container">
+
+		<h1 style="padding-top: 20px; padding-bottom: 20px">Edit or Delete a Wine!</h1>
+
+		<img src="<%=oneWine.picture %>" style="margin-left:0; margin-top:10px; margin-bottom:10px"/>
+
+		<div row="col-md-12" style="margin-top:20px">
+			<form method="post" action="/edit/<%= oneWine.id %>?_method=put">
+				<input type="text" name="name" placeholder="Name" value="<%= oneWine.name%>"/>
+				<input type="text" name="year" placeholder="Year" value="<%= oneWine.year%>"/>
+				<input type="text" name="grapes" placeholder="Grapes" value="<%= oneWine.grapes%>"/>
+				<input type="text" name="country" placeholder="Country" value="<%= oneWine.country%>"/>
+				<input type="text" name="region" placeholder="Region" value="<%= oneWine.region%>"/>
+				<input type="text" name="description" placeholder="Description" value="<%= oneWine.description%>"/>
+				<input type="text" name="price" placeholder="Price" value="<%= oneWine.price%>"/>
+				<button type="submit" class="btn btn-warning" style="margin-top: 20px">Edit Wine</button>
+			</form>
+		</div>
+		<form method="post" action="/delete/<%= oneWine.id %>?_method=delete">
+			<button type="submit" class="btn btn-danger" style="margin-top: 10px">Delete Wine</button>
+		</form>
+	</div>
+</body>

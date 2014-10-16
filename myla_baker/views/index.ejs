@@ -1,0 +1,36 @@
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+<body style="background-color:#FFFCF6">
+
+	<div class="container">
+
+		<h1 style="padding-top: 20px; padding-bottom: 20px">Our Current Wines</h1>
+
+		<table class="table table-hover">
+			<tr>
+				<th>Name</th>
+				<th> </th>
+				<th>Year</th>
+				<th>Grapes</th>
+				<th>Country</th>
+				<th>Region</th>
+				<th>Description</th>
+				<th>Price</th>
+				<th> </th>
+		<% for (var i=0; i < allWines.length; i++) { %>
+			<tr>
+				<td><%= allWines[i].name %></td>
+				<td><img src="<%= allWines[i].picture %>"></td>
+				<td><%= allWines[i].year %></td>
+				<td><%= allWines[i].grapes %></td>
+				<td><%= allWines[i].country %></td>
+				<td><%= allWines[i].region %></td>
+				<td><%= allWines[i].description %></td>
+				<td><%= allWines[i].price %></td>
+				<td><button type="button" class="btn btn-info"><a href="/edit/<%= allWines[i].id %>" style="color:white">Edit Wine</a></button></td>
+			</tr>
+		<% } %>
+		</table>
+	</div>
+</body>

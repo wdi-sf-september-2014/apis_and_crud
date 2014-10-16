@@ -1,0 +1,25 @@
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+<body style="background-color:#FFFCF6">
+	<div class="container">
+
+		<h1 style="padding-top: 20px; padding-bottom: 20px">Add Your Favorite Wine!</h1>
+
+
+		<div row="col-md-10">
+			<form method="post" action="/new">
+				<input type="text" name="name" placeholder="Name"/>
+				<input type="text" name="year" placeholder="Year"/>
+				<input type="text" name="grapes" placeholder="Grapes"/>
+				<input type="text" name="country" placeholder="Country"/>
+				<input type="text" name="region" placeholder="Region"/>
+				<input type="text" name="description" placeholder="Description"/>
+				<input type="text" name="price" placeholder="Price"/>
+		</div>
+		<div row="col-md-2">
+				<button type="submit" class="btn btn-success" style="margin-top:10px">Submit New Wine</button>
+		</div>
+			</form>
+	</div>
+</body>
