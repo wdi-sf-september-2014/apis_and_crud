@@ -41,7 +41,7 @@ app.post('/new', function(req, res) {
 			country:req.body.country,
 			region:req.body.region,
 			description:req.body.description,
-			picture:req.body.picture
+			price:req.body.price
 		}
 	}, function(error, response, body) {
 		res.redirect('/');
@@ -70,7 +70,7 @@ app.put('/edit/:id', function(req, res) {
 			country:req.body.country,
 			region:req.body.region,
 			description:req.body.description,
-			picture:req.body.picture
+			price:req.body.price
 		}
 	}, function(error, response, body) {
 		res.redirect('/');

@@ -25,6 +25,7 @@
 		<td>Country</td>
 		<td>Region</td>
 		<td>Description</td>
+		<td>Price</td>
 		<td>Picture</td> 
 		<td>Manage</td>
 	</tr>	
@@ -38,6 +39,7 @@
 		<td><%= allWines[i].country %></td>
 		<td><%= allWines[i].region %></td>
 		<td><%= allWines[i].description %></td>
+		<td><%= allWines[i].price %></td>
 		<td><img src="<%= allWines[i].picture %>"></td> 
 		<td><a href="/edit/<%= allWines[i].id %>">Edit Wine</a></td>
 	</tr>	
