@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Wine Inventory Manager</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<!-- Font awesome -->
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<!-- custom css file -->
+	<link rel="stylesheet" href="custom.css">
+
+</head>
+
+<body>
+
+<table>
+	<tr>
+		<td>Name</td>
+		<td>Year</td>
+		<td>Grapes</td>
+		<td>Country</td>
+		<td>Region</td>
+		<td>Description</td>
+		<td>Picture</td> 
+		<td>Manage</td>
+	</tr>	
+
+
+<% for (var i = 0; i < allWines.length; i++) { %>
+	<tr>
+		<td><%= allWines[i].name %></td>
+		<td><%= allWines[i].year %></td>
+		<td><%= allWines[i].grapes %></td>
+		<td><%= allWines[i].country %></td>
+		<td><%= allWines[i].region %></td>
+		<td><%= allWines[i].description %></td>
+		<td><img src="<%= allWines[i].picture %>"></td> 
+		<td><a href="/edit/<%= allWines[i].id %>">Edit Wine</a></td>
+	</tr>	
+<% } %>
+
+
+<script type='text/javascript' src='https://code.jquery.com/jquery-2.1.1.min.js'></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>
+</html>
