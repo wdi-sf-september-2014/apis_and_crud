@@ -12,6 +12,9 @@ app.use(bodyParser.urlencoded({
 
 app.use(methodOverride("_method"));
 
+//set public directory so CSS linking works
+app.use(express.static(__dirname + '/public'));
+
 app.get('/', function(req, res) {
 	request({
 		method: "GET",
