@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+	<body>
+		<% for (var i = 0; i < allWines.length; i++) {
+			%>
+			<div>
+				<%= allWines[i].winename %> 
+				<%= allWines[i].year %> 
+				<%= allWines[i].grapes %>
+				<%= allWines[i].country %>
+				<%= allWines[i].region %>
+				<%= allWines[i].description %>
+				<img src="<%= allWines[i].picture %>" />
+				<%= allWines[i].price %>
+				<a href="/edit/<%= allWines[i].id %>">Edit Wine</a>
+			</div>
+	<%	}	%>
+	</body>
+
+</html>

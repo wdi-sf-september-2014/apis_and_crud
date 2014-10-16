@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<form method='post' action='/edit/<%= oneWine.id %>?_method=put'>
+			<input type="text" name="name" placeholder="Wine Name" width="35" value="<%= oneWine.name %>" />
+			<input type="text" name="year" placeholder="Wine Year" width="35" value="<%= oneWine.year %>" />
+			<input type="text" name="grapes" placeholder="Grapes Used" width="35" value="<%= oneWine.grapes %>" />
+			<input type="text" name="country" placeholder="Wine Country" width="35" value="<%= oneWine.country %>" />
+			<input type="text" name="region" placeholder="Wine Region" width="35" value="<%= oneWine.region %>" />
+			<input type="text" name="description" placeholder="Wine Description" width="35" value="<%= oneWine.description %>" />
+			<input type="text" name="price" placeholder="Wine Name" width="35" value="<%= oneWine.price %>" />
+		</form>
+
+		<form method="post" action="/delete/<%= oneWine.id %>?_method=delete">
+			<button type="submit">Delete Wine</button>
+		</form>
+	</body>
+</html>
