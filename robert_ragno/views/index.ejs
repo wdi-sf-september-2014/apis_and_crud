@@ -17,35 +17,31 @@
 
 <body>
 
-<table>
-	<tr>
-		<td>Name</td>
-		<td>Year</td>
-		<td>Grapes</td>
-		<td>Country</td>
-		<td>Region</td>
-		<td>Description</td>
-		<td>Price</td>
-		<td>Picture</td> 
-		<td>Manage</td>
-	</tr>	
+<div class="container">
+<h1>Wine Inventory Manager</h1>
 
-
+<div class="row">
 <% for (var i = 0; i < allWines.length; i++) { %>
-	<tr>
-		<td><%= allWines[i].name %></td>
-		<td><%= allWines[i].year %></td>
-		<td><%= allWines[i].grapes %></td>
-		<td><%= allWines[i].country %></td>
-		<td><%= allWines[i].region %></td>
-		<td><%= allWines[i].description %></td>
-		<td><%= allWines[i].price %></td>
-		<td><img src="<%= allWines[i].picture %>"></td> 
-		<td><a href="/edit/<%= allWines[i].id %>">Edit Wine</a></td>
-	</tr>	
+	
+	  <div class="col-sm-6 col-md-4">
+	    <div class="thumbnail">
+	      <img src="<%= allWines[i].picture %>">
+	      <div id ="vino" class="caption">
+	        <h3><%= allWines[i].name %></h3>
+	        <h4><%= allWines[i].year %></h4>
+	        <h4><%= allWines[i].country %></h4>
+	        <h4><%= allWines[i].region %></h4>
+	        <h4><%= allWines[i].grapes %></h4>
+	        <h4>$<%= allWines[i].price %></h4>
+	        <p><%= allWines[i].description %></p>
+	        <p><a href="/edit/<%= allWines[i].id %>" class="btn btn-primary" role="button">Edit Wine</a></p>
+	      </div>
+	    </div>
+	  </div>
+	
 <% } %>
-
-
+</div>
+</div>
 <script type='text/javascript' src='https://code.jquery.com/jquery-2.1.1.min.js'></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </body>
